@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'DisposableDroidBB';
-    src: url('DisposableDroidBB.ttf') format('truetype'); /* Replace with the path to your font file */
+    src: url('DisposableDroidBB.ttf') format('truetype');
 }
 
 * {
@@ -23,65 +23,65 @@ body {
 
 .container {
     background: rgba(0, 0, 0, 0.6);
-    padding: 33px;  /* Increased by 50% */
-    border-radius: 12px;  /* Increased by 50% */
-    max-width: 660px;  /* Increased by 50% */
+    padding: 33px;
+    border-radius: 12px;
+    max-width: 660px;
     width: 100%;
 }
 
 .avatar {
-    width: 165px;  /* Increased by 50% */
-    height: 165px;  /* Increased by 50% */
+    width: 165px;
+    height: 165px;
     border-radius: 50%;
-    border: 6px solid black;  /* Increased by 50% */
+    border: 6px solid black;
 }
 
 h1 {
-    font-size: 39.6px;  /* Increased by 50% */
-    margin: 16.5px 0;  /* Increased by 50% */
+    font-size: 39.6px;
+    margin: 16.5px 0;
 }
 
 .description {
-    font-size: 26.4px;  /* Increased by 50% */
-    margin: 8.25px 0;  /* Increased by 50% */
+    font-size: 26.4px;
+    margin: 8.25px 0;
 }
 
 .socials {
     display: flex;
     justify-content: space-around;
-    margin: 33px 0;  /* Increased by 50% */
+    margin: 33px 0;
 }
 
 .icon {
-    width: 66px;  /* Increased by 50% */
-    height: 66px;  /* Increased by 50% */
+    width: 66px;
+    height: 66px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 39.6px;  /* Increased by 50% */
+    font-size: 39.6px;
     text-decoration: none;
-    color: white;
-    background: white;
+    color: black;
+    background: white;  /* White background */
     border: 3px solid black;  /* Black outline */
 }
 
-.icon.youtube { background: #FF0000; }
-.icon.twitch { background: #6441A5; }
-.icon.twitter { background: #1DA1F2; }
-.icon.bluesky { background: #00C2FF; }
-
-.logo {
-    width: 36px;  /* Increased by 50% */
-    height: 36px;  /* Increased by 50% */
+.icon img {
+    width: 36px;
+    height: 36px;
     object-fit: contain;
+}
+
+/* Remove background colors from individual icons */
+.icon.youtube, .icon.twitch, .icon.twitter, .icon.bluesky {
+    background: white;
 }
 
 .merch-link {
     color: #FFD700;
     font-weight: bold;
     text-decoration: none;
-    font-size: 29.4px;  /* Increased by 50% */
+    font-size: 29.4px;
 }
 
 .merch-link:hover {
