@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'DisposableDroidBB';
-    src: url('DisposableDroidBB.ttf') format('truetype');
+    src: url('./DisposableDroidBB.ttf') format('truetype');
 }
 
 * {
@@ -59,22 +59,16 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 39.6px;
+    background-color: white;  /* Ensure white background */
+    border: 3px solid black;  /* Black border */
+    color: black;  /* Black color for icon text */
     text-decoration: none;
-    color: black;
-    background: white;  /* White background */
-    border: 3px solid black;  /* Black outline */
 }
 
 .icon img {
     width: 36px;
     height: 36px;
     object-fit: contain;
-}
-
-/* Remove background colors from individual icons */
-.icon.youtube, .icon.twitch, .icon.twitter, .icon.bluesky {
-    background: white;
 }
 
 .merch-link {
