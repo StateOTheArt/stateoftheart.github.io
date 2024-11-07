@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'DisposableDroidBB';
+    src: url('DisposableDroidBB.ttf') format('truetype'); /* Replace with the path to your font file */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +10,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'DisposableDroidBB', Arial, sans-serif;
     background-image: url('Gradient1_1920x1080.png');
     background-size: cover;
     display: flex;
@@ -18,46 +23,47 @@ body {
 
 .container {
     background: rgba(0, 0, 0, 0.6);
-    padding: 22px;  /* Increased by 10% */
-    border-radius: 8px;
-    max-width: 440px;  /* Increased by 10% */
+    padding: 33px;  /* Increased by 50% */
+    border-radius: 12px;  /* Increased by 50% */
+    max-width: 660px;  /* Increased by 50% */
     width: 100%;
 }
 
 .avatar {
-    width: 110px;  /* Increased by 10% */
-    height: 110px;  /* Increased by 10% */
+    width: 165px;  /* Increased by 50% */
+    height: 165px;  /* Increased by 50% */
     border-radius: 50%;
-    border: 4px solid black;
+    border: 6px solid black;  /* Increased by 50% */
 }
 
 h1 {
-    font-size: 26.4px;  /* Increased by 10% */
-    margin: 11px 0;  /* Increased by 10% */
+    font-size: 39.6px;  /* Increased by 50% */
+    margin: 16.5px 0;  /* Increased by 50% */
 }
 
 .description {
-    font-size: 17.6px;  /* Increased by 10% */
-    margin: 5.5px 0;  /* Increased by 10% */
+    font-size: 26.4px;  /* Increased by 50% */
+    margin: 8.25px 0;  /* Increased by 50% */
 }
 
 .socials {
     display: flex;
     justify-content: space-around;
-    margin: 22px 0;  /* Increased by 10% */
+    margin: 33px 0;  /* Increased by 50% */
 }
 
 .icon {
-    width: 44px;  /* Increased by 10% */
-    height: 44px;  /* Increased by 10% */
+    width: 66px;  /* Increased by 50% */
+    height: 66px;  /* Increased by 50% */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26.4px;  /* Increased by 10% */
+    font-size: 39.6px;  /* Increased by 50% */
     text-decoration: none;
     color: white;
-    background: #333;
+    background: white;
+    border: 3px solid black;  /* Black outline */
 }
 
 .icon.youtube { background: #FF0000; }
@@ -66,8 +72,8 @@ h1 {
 .icon.bluesky { background: #00C2FF; }
 
 .logo {
-    width: 24px;  /* Size of the logo inside the circle */
-    height: 24px;  /* Size of the logo inside the circle */
+    width: 36px;  /* Increased by 50% */
+    height: 36px;  /* Increased by 50% */
     object-fit: contain;
 }
 
@@ -75,7 +81,7 @@ h1 {
     color: #FFD700;
     font-weight: bold;
     text-decoration: none;
-    font-size: 19.6px;  /* Increased by 10% */
+    font-size: 29.4px;  /* Increased by 50% */
 }
 
 .merch-link:hover {
