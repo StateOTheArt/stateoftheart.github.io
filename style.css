@@ -48,9 +48,8 @@ h1 {
 
 .socials {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 33px 0;
-    width: 100%;
 }
 
 .icon {
@@ -70,10 +69,6 @@ h1 {
     width: 36px;
     height: 36px;
     object-fit: contain;
-}
-
-.socials .icon {
-    margin: 0 8px;
 }
 
 .merch-link {
