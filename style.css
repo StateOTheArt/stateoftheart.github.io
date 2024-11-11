@@ -77,10 +77,9 @@ h1 {
     text-decoration: none;
     font-size: 29.4px;
     display: block;
-    margin-top: 15px; /* Adds some space between the links */
+    margin-top: 15px;
 }
 
 .merch-link:hover {
     text-decoration: underline;
 }
-
