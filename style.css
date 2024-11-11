@@ -76,20 +76,11 @@ h1 {
     font-weight: bold;
     text-decoration: none;
     font-size: 29.4px;
+    display: block;
+    margin-top: 15px; /* Adds some space between the links */
 }
 
 .merch-link:hover {
     text-decoration: underline;
 }
 
-.donate-link {
-    color: #FFD700;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 29.4px;
-    margin-top: 20px;
-}
-
-.donate-link:hover {
-    text-decoration: underline;
-}
