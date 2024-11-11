@@ -81,3 +81,15 @@ h1 {
 .merch-link:hover {
     text-decoration: underline;
 }
+
+.donate-link {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 29.4px;
+    margin-top: 20px;
+}
+
+.donate-link:hover {
+    text-decoration: underline;
+}
