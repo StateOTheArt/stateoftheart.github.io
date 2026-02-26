@@ -37,7 +37,10 @@ body {
 body::before {
     content: "";
     position: fixed;
-    inset: -50%;
+
+    /* EXTENDED FURTHER so rotation never clips */
+    inset: -75%;
+
     pointer-events: none;
 
     background-image: radial-gradient(
@@ -63,7 +66,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 11%; /* slightly more right */
+    padding-left: 11%;
 }
 
 .content {
@@ -76,13 +79,13 @@ body::before {
 
 h1 {
     font-family: 'DisposableDroidBB', Arial, sans-serif;
-    font-size: 64px; /* scaled up from 50 */
+    font-size: 76px; /* was 64px */
     margin-bottom: 20px;
 }
 
 .intro {
     font-family: 'BROmegaBold', Arial, sans-serif;
-    font-size: 58px; /* scaled proportionally (was 44) */
+    font-size: 46px; /* was 58px */
     line-height: 1.2;
     margin-bottom: 36px;
 }
@@ -94,12 +97,12 @@ h1 {
 .links {
     display: flex;
     flex-direction: column;
-    gap: 8px; /* slightly tighter */
+    gap: 8px;
 }
 
 .links a {
     font-family: 'BROmegaBold', Arial, sans-serif;
-    font-size: 22px; /* slightly larger to match scaling */
+    font-size: 22px;
     text-decoration: none;
     color: white;
     transition: opacity 0.2s ease;
