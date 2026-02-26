@@ -11,38 +11,60 @@
 
 body {
     font-family: 'DisposableDroidBB', Arial, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     color: white;
+    position: relative;
 
-    /* MATCHING StateError5 COLORS */
-    background:
-        radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-        linear-gradient(
-            135deg,
-            #1a0033 0%,
-            #3a0070 40%,
-            #6a00ff 75%,
-            #9d4edd 100%
-        );
-
-    background-size: 18px 18px, cover;
-    background-position: 0 0, center;
+    /* UPDATED GRADIENT (purple → blue → green like reference) */
+    background: linear-gradient(
+        135deg,
+        #2b0066 0%,
+        #4b00a8 30%,
+        #3f1eff 55%,
+        #00c853 100%
+    );
 }
 
 /* ===================== */
-/* TOP RIGHT LOGO */
+/* DIAGONAL DOT OVERLAY */
 /* ===================== */
 
-.logo {
+body::before {
+    content: "";
     position: absolute;
-    top: 40px;
-    right: 60px;
-    width: 220px;
+    inset: 0;
+    pointer-events: none;
+
+    /* Larger, evenly spaced dots */
+    background-image: radial-gradient(
+        rgba(255,255,255,0.18) 3px,
+        transparent 3px
+    );
+
+    background-size: 26px 26px;
+
+    /* Make dots diagonal */
+    transform: rotate(45deg);
+    transform-origin: center;
+
+    z-index: 0;
 }
 
 /* ===================== */
-/* HERO TEXT SECTION */
+/* WATERMARK TOP LEFT */
+/* ===================== */
+
+.watermark {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    z-index: 3;
+}
+
+/* ===================== */
+/* HERO SECTION */
 /* ===================== */
 
 .hero {
@@ -50,11 +72,12 @@ body {
     display: flex;
     align-items: center;
     padding-left: 100px;
+    position: relative;
+    z-index: 2;
 }
 
 .left-content {
     max-width: 600px;
-    z-index: 2;
 }
 
 h1 {
