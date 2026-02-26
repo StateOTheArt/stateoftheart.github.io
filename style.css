@@ -47,7 +47,7 @@ body::before {
         transparent 1.5px
     );
 
-    background-size: 13px 13px; /* 4x density compared to 26px */
+    background-size: 10px 10px; /* 4x density compared to 26px */
 
     transform: rotate(45deg);
     z-index: 0;
