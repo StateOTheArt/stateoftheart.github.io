@@ -11,15 +11,32 @@
 
 body {
     font-family: 'DisposableDroidBB', Arial, sans-serif;
-    background-image: url('StateError5.png'); /* we'll refine this */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     overflow: hidden;
     color: white;
-}
 
+    /* Gradient Background */
+    background: linear-gradient(
+        135deg,
+        #2a003f 0%,
+        #4b0082 40%,
+        #7a00ff 75%,
+        #a855f7 100%
+    );
+
+    /* Subtle dot texture overlay */
+    background-image:
+        radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(
+            135deg,
+            #2a003f 0%,
+            #4b0082 40%,
+            #7a00ff 75%,
+            #a855f7 100%
+        );
+
+    background-size: 30px 30px, cover;
+}
 /* ========================= */
 /* NAVBAR */
 /* ========================= */
