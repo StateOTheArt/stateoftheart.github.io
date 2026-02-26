@@ -15,95 +15,95 @@ body {
     overflow: hidden;
     color: white;
 
-    /* Gradient Background */
-    background: linear-gradient(
-        135deg,
-        #2a003f 0%,
-        #4b0082 40%,
-        #7a00ff 75%,
-        #a855f7 100%
-    );
-
-    /* Subtle dot texture overlay */
-    background-image:
-        radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    /* MATCHING StateError5 COLORS */
+    background:
+        radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
         linear-gradient(
             135deg,
-            #2a003f 0%,
-            #4b0082 40%,
-            #7a00ff 75%,
-            #a855f7 100%
+            #1a0033 0%,
+            #3a0070 40%,
+            #6a00ff 75%,
+            #9d4edd 100%
         );
 
-    background-size: 30px 30px, cover;
+    background-size: 18px 18px, cover;
+    background-position: 0 0, center;
 }
-/* ========================= */
-/* NAVBAR */
-/* ========================= */
 
-.navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 30px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* ===================== */
+/* TOP RIGHT LOGO */
+/* ===================== */
 
 .logo {
-    font-size: 32px;
-    letter-spacing: 2px;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 220px;
 }
 
-.nav-links a {
-    margin-left: 30px;
+/* ===================== */
+/* HERO TEXT SECTION */
+/* ===================== */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.left-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 72px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* ===================== */
+/* SOCIAL LINKS */
+/* ===================== */
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.links a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
-    transition: 0.3s;
+    font-size: 24px;
+    transition: 0.2s;
 }
 
-.nav-links a:hover {
+.links a:hover {
     opacity: 0.7;
 }
 
-.kofi {
+.tipjar {
+    margin-top: 20px;
     border-bottom: 3px solid white;
+    width: fit-content;
 }
 
-/* ========================= */
-/* HERO SECTION */
-/* ========================= */
+/* ===================== */
+/* CHARACTER */
+/* ===================== */
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 0 100px;
-}
-
-.hero-text {
-    max-width: 600px;
-}
-
-.hero-text h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-.hero-text h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 28px;
-    line-height: 1.5;
-}
-
-.hero-image img {
-    height: 85vh;
+.character {
+    position: absolute;
+    bottom: 0;
+    right: 8%;
+    height: 95vh;
     object-fit: contain;
+    z-index: 1;
 }
