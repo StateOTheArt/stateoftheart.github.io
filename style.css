@@ -3,7 +3,12 @@
     src: url('./DisposableDroidBB.ttf') format('truetype');
 }
 
-/* Reset */
+@font-face {
+    font-family: 'BROmegaBold';
+    src: url('./BR-Omega-Bold.ttf') format('truetype');
+}
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +22,6 @@ body {
     overflow: hidden;
     position: relative;
 
-    /* Updated gradient closer to reference tones */
     background: linear-gradient(
         135deg,
         #2b0066 0%,
@@ -28,28 +32,29 @@ body {
 }
 
 /* ========================= */
-/* FULLSCREEN DIAGONAL DOTS */
+/* DENSE SMALL DIAGONAL DOTS */
 /* ========================= */
 
 body::before {
     content: "";
     position: fixed;
-    inset: -50%;  /* extend beyond screen so rotation doesn't crop */
+    inset: -50%;
     pointer-events: none;
 
+    /* Smaller dots, much denser */
     background-image: radial-gradient(
-        rgba(255,255,255,0.18) 3px,
-        transparent 3px
+        rgba(255,255,255,0.18) 1.5px,
+        transparent 1.5px
     );
 
-    background-size: 26px 26px;
+    background-size: 13px 13px; /* 4x density compared to 26px */
 
     transform: rotate(45deg);
     z-index: 0;
 }
 
 /* ========================= */
-/* CENTERED CONTENT */
+/* LAYOUT */
 /* ========================= */
 
 .hero {
@@ -58,42 +63,42 @@ body::before {
 
     min-height: 100vh;
     display: flex;
-    align-items: center;       /* vertical center */
-    justify-content: center;   /* horizontal control */
+    align-items: center;
+    justify-content: flex-start; /* move left */
+    padding-left: 8%;
 }
 
 .content {
-    width: 100%;
-    max-width: 650px;
+    max-width: 750px;
 }
 
 /* ========================= */
-/* TEXT STYLING */
+/* TEXT */
 /* ========================= */
 
 h1 {
-    font-size: 64px;
-    margin-bottom: 20px;
+    font-size: 50px; /* smaller than before */
+    margin-bottom: 18px;
 }
 
 .intro {
-    font-size: 30px;
-    line-height: 1.3;   /* tighter spacing */
-    margin-bottom: 35px;
+    font-size: 44px; /* close to Hiya */
+    line-height: 1.2; /* consistent spacing */
+    margin-bottom: 30px;
 }
 
 /* ========================= */
-/* SOCIAL LINKS */
+/* LINKS */
 /* ========================= */
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 14px; /* tighter spacing */
+    gap: 12px;
 }
 
 .links a {
-    font-family: Arial, sans-serif; /* simpler font */
+    font-family: 'BROmegaBold', Arial, sans-serif;
     font-size: 20px;
     text-decoration: none;
     color: white;
@@ -105,7 +110,7 @@ h1 {
 }
 
 .tipjar {
-    margin-top: 12px;
+    margin-top: 10px;
     border-bottom: 2px solid white;
     width: fit-content;
 }
@@ -117,7 +122,7 @@ h1 {
 .character {
     position: absolute;
     bottom: 0;
-    right: 6%;
+    right: 5%;
     height: 95vh;
     object-fit: contain;
     z-index: 1;
