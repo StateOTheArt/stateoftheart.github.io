@@ -30,9 +30,7 @@ body {
     );
 }
 
-/* ========================= */
-/* DENSE SMALL DIAGONAL DOTS */
-/* ========================= */
+/* DOT BACKGROUND */
 
 body::before {
     content: "";
@@ -46,19 +44,15 @@ body::before {
     );
 
     background-size: 13px 13px;
-
     transform: rotate(45deg);
     z-index: 0;
 }
 
-/* ========================= */
 /* LAYOUT */
-/* ========================= */
 
 .hero {
     position: relative;
     z-index: 2;
-
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -70,9 +64,7 @@ body::before {
     max-width: 820px;
 }
 
-/* ========================= */
 /* TEXT */
-/* ========================= */
 
 h1 {
     font-family: 'DisposableDroidBB', Arial, sans-serif;
@@ -87,9 +79,7 @@ h1 {
     margin-bottom: 36px;
 }
 
-/* ========================= */
 /* LINKS */
-/* ========================= */
 
 .links {
     display: flex;
@@ -115,53 +105,53 @@ h1 {
     width: fit-content;
 }
 
-/* ========================= */
 /* CHARACTER */
-/* ========================= */
 
 .character {
     position: absolute;
-    bottom: 0;
+    bottom: -15px; /* slightly lower than before */
     right: 5%;
     height: 95vh;
     object-fit: contain;
     z-index: 1;
 
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(80px);
 
-    /* 1) Float in with overshoot (1.2s)
-       2) Idle float starts AFTER that (delay 1.2s) */
     animation:
         floatIn 1.2s ease-out forwards,
         idleFloat 4s ease-in-out 1.2s infinite;
 }
 
-/* Float In with slight overshoot */
+/* ENTRY ANIMATION */
+/* Moves upward into final resting bottom position */
+
 @keyframes floatIn {
     0% {
         opacity: 0;
-        transform: translateY(60px);
+        transform: translateY(80px);
     }
 
-    70% {
+    75% {
         opacity: 1;
-        transform: translateY(-8px); /* overshoot upward slightly */
+        transform: translateY(-6px); /* small overshoot */
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0); /* true resting position */
     }
 }
 
-/* Very subtle idle float */
+/* IDLE FLOAT */
+/* Always returns to resting position */
+
 @keyframes idleFloat {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-6px); /* tiny lift, safe */
+        transform: translateY(-4px); /* very subtle lift */
     }
     100% {
         transform: translateY(0);
