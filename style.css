@@ -37,10 +37,7 @@ body {
 body::before {
     content: "";
     position: fixed;
-
-    /* EXTENDED FURTHER so rotation never clips */
     inset: -75%;
-
     pointer-events: none;
 
     background-image: radial-gradient(
@@ -79,13 +76,13 @@ body::before {
 
 h1 {
     font-family: 'DisposableDroidBB', Arial, sans-serif;
-    font-size: 76px; /* was 64px */
+    font-size: 76px;
     margin-bottom: 20px;
 }
 
 .intro {
     font-family: 'BROmegaBold', Arial, sans-serif;
-    font-size: 46px; /* was 58px */
+    font-size: 46px;
     line-height: 1.2;
     margin-bottom: 36px;
 }
@@ -129,4 +126,44 @@ h1 {
     height: 95vh;
     object-fit: contain;
     z-index: 1;
+
+    opacity: 0;
+    transform: translateY(60px);
+
+    /* 1) Float in with overshoot (1.2s)
+       2) Idle float starts AFTER that (delay 1.2s) */
+    animation:
+        floatIn 1.2s ease-out forwards,
+        idleFloat 4s ease-in-out 1.2s infinite;
+}
+
+/* Float In with slight overshoot */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-8px); /* overshoot upward slightly */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Very subtle idle float */
+@keyframes idleFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px); /* tiny lift, safe */
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
