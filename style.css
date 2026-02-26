@@ -11,75 +11,82 @@
 
 body {
     font-family: 'DisposableDroidBB', Arial, sans-serif;
-    background-image: url('State1Gradient1920_1080.png');
+    background-image: url('StateError5.png'); /* we'll refine this */
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    overflow: hidden;
     color: white;
-    text-align: center;
 }
 
-.container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 33px;
-    border-radius: 12px;
-    max-width: 660px;
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
     width: 100%;
-}
-
-.avatar {
-    width: 165px;
-    height: 165px;
-    border-radius: 50%;
-    border: 6px solid black;
-}
-
-h1 {
-    font-size: 39.6px;
-    margin: 16.5px 0;
-}
-
-.description {
-    font-size: 26.4px;
-    margin: 8.25px 0;
-}
-
-.socials {
+    padding: 30px 60px;
     display: flex;
-    justify-content: space-around;
-    margin: 33px 0;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.icon {
-    width: 66px;
-    height: 66px;
-    border-radius: 50%;
+.logo {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.nav-links a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.kofi {
+    border-bottom: 3px solid white;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: white;  
-    border: 3px solid black;  
-    color: black;  
-    text-decoration: none;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 100px;
 }
 
-.icon img {
-    width: 36px;
-    height: 36px;
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.hero-image img {
+    height: 85vh;
     object-fit: contain;
-}
-
-.merch-link {
-    color: #FFD700;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 29.4px;
-    display: block;
-    margin-top: 15px;
-}
-
-.merch-link:hover {
-    text-decoration: underline;
 }
