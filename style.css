@@ -17,12 +17,12 @@
 
 html, body {
     height: 100%;
-    overflow: hidden; /* absolutely no scrolling */
+    overflow: hidden;
 }
 
 body {
     font-family: 'DisposableDroidBB', Arial, sans-serif;
-    min-height: 100vh;
+    height: 100%;
     color: white;
     position: relative;
 
@@ -63,7 +63,7 @@ body::before {
     position: relative;
     z-index: 2;
 
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -125,23 +125,25 @@ h1 {
 
 .character {
     position: absolute;
-    bottom: -10px; /* raised ~6px */
+    bottom: -10px; /* your chosen value kept */
     right: 5%;
-    height: 95vh;
+    height: 95%;
     object-fit: contain;
     z-index: 1;
 
-    /* ONLY idle bounce */
+    transform: translateZ(0); /* prevent Safari repaint wipe */
+    will-change: transform;
+
     animation: idleFloat 4s ease-in-out infinite;
 }
 
-/* SUBTLE IDLE FLOAT */
+/* SUBTLE IDLE FLOAT ONLY */
 @keyframes idleFloat {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(0) translateZ(0);
     }
     50% {
-        transform: translateY(-6px);
+        transform: translateY(-6px) translateZ(0);
     }
 }
 
@@ -153,7 +155,7 @@ h1 {
 
     html, body {
         height: 100%;
-        overflow: hidden; /* completely disable scroll */
+        overflow: hidden;
     }
 
     body {
@@ -162,7 +164,7 @@ h1 {
     }
 
     .hero {
-        height: 100vh;
+        height: 100%;
         padding: 40px 8% 0 8%;
         align-items: flex-start;
     }
@@ -179,7 +181,7 @@ h1 {
     }
 
     .intro {
-        font-size: 30px; /* slightly smaller so "guy" stays in correct line */
+        font-size: 30px;
         line-height: 1.15;
         margin-bottom: 22px;
     }
@@ -188,12 +190,15 @@ h1 {
         font-size: 18px;
     }
 
+    /* Stable cross-browser mobile positioning */
     .character {
         position: absolute;
-        bottom: -20px;
-        right: -40%;
-        height: 65vh;
+        bottom: -5px;
+        right: -28%;
+        height: 78%;
         z-index: 0;
         opacity: 0.95;
+
+        transform: translateZ(0);
     }
 }
