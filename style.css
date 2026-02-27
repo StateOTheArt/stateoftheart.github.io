@@ -120,20 +120,18 @@ h1 {
 }
 
 /* ========================= */
-/* CHARACTER */
+/* CHARACTER - DESKTOP */
 /* ========================= */
 
 .character {
     position: absolute;
-    bottom: -20px;   /* moved lower */
+    bottom: -20px;   /* stays lowered */
     right: 5%;
-    height: 85%;     /* slightly smaller (was 95%) */
+    height: 95%;     /* back to original size */
     object-fit: contain;
     z-index: 1;
 
-    /* removed will-change to prevent odd load behavior */
     transform: translateY(0);
-    
     animation: idleFloat 4s ease-in-out infinite;
 }
 
@@ -190,12 +188,12 @@ h1 {
         font-size: 18px;
     }
 
-    /* Stable cross-browser mobile positioning */
+    /* MOBILE CHARACTER (unchanged) */
     .character {
         position: absolute;
-        bottom: -20px;  /* matched desktop change */
+        bottom: -20px;
         right: -28%;
-        height: 70%;    /* slightly smaller than before */
+        height: 70%;
         z-index: 0;
         opacity: 0.95;
 
