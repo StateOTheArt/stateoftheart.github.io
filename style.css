@@ -125,7 +125,7 @@ h1 {
 
 .character {
     position: absolute;
-    bottom: -34px; /* raised ~6px */
+    bottom: -10px; /* raised ~6px */
     right: 5%;
     height: 95vh;
     object-fit: contain;
